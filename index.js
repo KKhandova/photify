@@ -1,39 +1,12 @@
-const initApp = () => {
-  const droparea = document.querySelector(".droparea");
-  const input = document.querySelector("input");
+const input = document.querySelector("#inputFiles");
 
-  const active = () => input.classList.add("green-border");
+//if a user uploads using choose file button
+//   input.addEventListener("change", (e) => {
+//     const fileArray = Array.from(input.files);
+//     sendPhotosToServer(fileArray);
+//   });
 
-  const inactive = () => input.classList.remove("green-border");
-
-  const prevents = (e) => e.preventDefault();
-
-  ["dragenter", "dragover", "dragleave", "drop"].forEach((evtName) => {
-    droparea.addEventListener(evtName, prevents);
-  });
-
-  ["dragenter", "dragover"].forEach((evtName) => {
-    droparea.addEventListener(evtName, active);
-  });
-
-  ["dragleave", "drop"].forEach((evtName) => {
-    droparea.addEventListener(evtName, inactive);
-  });
-  //if a user uploads using drag & drop
-  droparea.addEventListener("drop", (e) => {
-    const dt = e.dataTransfer;
-    const fileArray = [...dt.files];
-    sendPhotosToServer(fileArray);
-  });
-
-  //if a user uploads using choose file button
-  input.addEventListener("change", (e) => {
-    const fileArray = Array.from(input.files);
-    sendPhotosToServer(fileArray);
-  });
-};
-
-document.addEventListener("DOMContentLoaded", initApp);
+//document.addEventListener("DOMContentLoaded", initApp);
 
 const sendPhotosToServer = (files) => {
   console.log(files);
@@ -41,6 +14,7 @@ const sendPhotosToServer = (files) => {
   files.forEach((file) => {
     formData.append("file", file);
   });
+
   console.log(formData);
 
   //POST REQUEST TO DO

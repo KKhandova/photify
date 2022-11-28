@@ -12,15 +12,6 @@
 } */
 
 
-
-
-
-
-.green-border {
-    color: #333;
-  text-shadow: none; 
-}
-
 /*
  * Globals
  */
@@ -30,7 +21,7 @@
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: #333;
+  color: #393E46;
   text-shadow: none; /* Prevent inheritance from `body` */
 }
 
