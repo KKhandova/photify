@@ -23,19 +23,73 @@
 </head>
 
 <body class="d-flex h-100 text-bg-dark">
-    <div class="cover-container d-flex w-100 min-vh-100 p-3 mx-auto flex-column">
-        <header class="mb-auto">
-            <div>
-                <h3 class="float-md-start mb-0 logo">Photify</h3>
-                <nav class="nav nav-masthead justify-content-center float-md-end">
-                    <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="#">About</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
-                </nav>
-            </div>
-        </header>
+    <div class="container d-flex w-100 min-vh-100 p-3 mx-auto flex-column align-items-center">
 
-        <main class="px-3">
+        <nav class="navbar navbar-expand-md navbar-dark d-flex justify-content-between" id="title">
+            <a class="navbar-brand logo" href="">Photify</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#examples">Examples</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#run">Send photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+
+        <!-- Examples -->
+
+        <section class="w-auto" id="examples">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/vikingKristina.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+
+                                <p class="card-text">Prompt example.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/NikitaThePirat.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+
+                                <p class="card-text">Prompt example</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/vikingKristina.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+
+                                <p class="card-text">Prompt example</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-3" id="run">
             <form action="https://httpbin.org/post" enctype="multipart/form-data" method="post">
                 <div class="mb-3">
                     <label for="inputEmail" class="form-label">Email address</label>
@@ -56,7 +110,7 @@
                 </div>
             </form>
 
-        </main>
+        </section>
 
         <footer class="mt-auto text-center text-white-50">
             <p>Photify app 2022</p>
