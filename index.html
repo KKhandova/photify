@@ -22,74 +22,125 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="d-flex h-100 text-bg-dark">
-    <div class="container d-flex w-100 min-vh-100 p-3 mx-auto flex-column align-items-center">
+<body class="text-bg-dark">
+    <section id="title">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <a class="navbar-brand logo" href="">Photify</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#examples">Examples</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#run">Send photos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
 
-        <nav class="navbar navbar-expand-md navbar-dark d-flex justify-content-between" id="title">
-            <a class="navbar-brand logo" href="">Photify</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#examples">Examples</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#run">Send photos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacts</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
 
+    <!-- Examples -->
 
+    <section id="examples" class="mx-auto">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 
-
-        <!-- Examples -->
-
-        <section class="w-auto" id="examples">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="images/vikingKristina.jpeg" class="card-img-top" alt="...">
+            <div class="carousel-inner">
+                <div class="carousel-item active container-fluid">
+                    <div class="row">
+                        <div class="col-md-3 mx-auto">
+                            <img src="images/NikitaThePirat.jpeg" alt="...">
                             <div class="card-body">
-
-                                <p class="card-text">Prompt example.</p>
-
+                                <p class="card-text">Prompt example</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="images/NikitaThePirat.jpeg" class="card-img-top" alt="...">
+                        <div class="col-md-3 mx-auto">
+                            <img src="images/KristinaHorns.jpeg" alt="...">
                             <div class="card-body">
-
                                 <p class="card-text">Prompt example</p>
-
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="images/vikingKristina.jpeg" class="card-img-top" alt="...">
+                        <div class="col-md-3 mx-auto">
+
+                            <img src="images/Kostya.jpeg" alt="...">
                             <div class="card-body">
-
                                 <p class="card-text">Prompt example</p>
-
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+                <div class="carousel-item container-fluid">
+                    <div class="row">
+                        <div class="col-md-3 mx-auto">
+                            <img src="images/1.jpeg" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Prompt example.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mx-auto">
+                            <img src="images/2.jpeg" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Prompt example</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mx-auto">
+                            <img src="images/3.jpeg" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Prompt example</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item container-fluid">
+                    <div class="row">
+                        <div class="col-md-3 mx-auto">
+                            <img src="images/vikingKristina.jpeg" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Prompt example.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mx-auto">
 
-        <section class="px-3" id="run">
+                            <img src="images/4.jpeg" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Prompt example</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mx-auto">
+                            <img src="images/3.jpeg" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Prompt example</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+    </section>
+
+    <section id="run" class="mx-auto">
+        <div class="container-fluid">
             <form action="https://httpbin.org/post" enctype="multipart/form-data" method="post">
                 <div class="mb-3">
                     <label for="inputEmail" class="form-label">Email address</label>
@@ -109,13 +160,14 @@
                     <button type="submit" class="btn btn-outline-light">Submit</button>
                 </div>
             </form>
+        </div>
 
-        </section>
+    </section>
 
-        <footer class="mt-auto text-center text-white-50">
-            <p>Photify app 2022</p>
-        </footer>
-    </div>
+    <footer class="mt-auto text-center text-white-50">
+        <p>Photify app 2022</p>
+    </footer>
+
     <!-- <div class="d-flex flex-column align-items-center justify-content-center min-vh-100">
          <div class="droparea">
             <input id="fileInput" type="file" multiple />

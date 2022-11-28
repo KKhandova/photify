@@ -1,15 +1,4 @@
-/* .droparea {
-    margin: 1rem auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 384px;
-    max-width: 100%;
-    height: 160px;
-    border: 4px dashed grey;
-    border-radius: 15px;
-} */
+
 
 
 /*
@@ -33,19 +22,25 @@
 body {
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+
 }
 
-.cover-container {
-  max-width: 42em;
-}
-
-#run, #title {
+#run {
     max-width: 42em;
-    width: 42em;
+}
+
+#title {
+    padding: 2% 20%;
 }
 
 
+#examples {
+    padding: 2% 5%;
+}
 
+.container-fluid {
+    
+}
 /*
  * Header
  */
@@ -73,4 +68,10 @@ body {
 .nav-masthead .active {
   color: #fff;
   border-bottom-color: #fff;
+}
+
+
+img {
+    max-width: 18rem;
+    border-radius: 5%;
 }
