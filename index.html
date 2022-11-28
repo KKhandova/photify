@@ -149,16 +149,16 @@
                 <div class="mb-3">
                     <label for="inputEmail" class="form-label">Email address</label>
                     <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
-                        placeholder="name@example.com">
+                        placeholder="name@example.com" required>
                     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="mb-3">
                     <label for="inputPrompt" class="form-label">What do you want?</label>
-                    <textarea class="form-control" name="prompt" id="inputPrompt" rows="3"></textarea>
+                    <textarea class="form-control" name="prompt" id="inputPrompt" rows="3" required></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="inputFiles" class="form-label">Upload 20 photos here</label>
-                    <input class="form-control" type="file" name="files" id="inputFiles" multiple>
+                    <input class="form-control" type="file" accept="image/*" name="files" id="inputFiles" multiple>
                 </div>
                 <div class="mb-3">
                     <button type="submit" class="btn btn-outline-light">Submit</button>

@@ -3,12 +3,20 @@ const email = document.querySelector("#inputEmail");
 const prompt = document.querySelector("#inputPrompt");
 //Click on logo will send AJAX post request (instead of sending it from the form)
 const logo = document.querySelector(".logo");
+let isSubmit = false;
 
-//if a user uploads using choose file button
-//   input.addEventListener("change", (e) => {
-//     const fileArray = Array.from(input.files);
-//     sendPhotosToServer(fileArray);
-//   });
+//Limit number of files
+//сделать неактивной кнопку сабмит, и активировать ее только если подходит количество файлов
+fileInput.addEventListener("change", (e) => {
+  const fileArray = Array.from(fileInput.files);
+  console.log(fileArray);
+  if (fileArray.length < 15 || fileArray.length > 30) {
+    isSubmit = false;
+    alert("alertalertaler");
+  } else {
+    isSubmit = true;
+  }
+});
 
 //document.addEventListener("DOMContentLoaded", initApp);
 
@@ -16,6 +24,10 @@ const logo = document.querySelector(".logo");
 logo.addEventListener("click", sendPhotosToServer);
 
 async function sendPhotosToServer() {
+  if (!isSubmit) {
+    alert("Please check number of your images");
+    return;
+  }
   let formData = new FormData();
   formData.append("email", email.value);
   formData.append("prompt", prompt.value);

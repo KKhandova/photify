@@ -99,3 +99,14 @@ img {
     max-width: 18rem;
     border-radius: 3%;
 }
+
+/* 
+Footer */
+
+.contact-icon {
+    margin: 20px 10px;
+}
+
+p {
+    font-size: 1rem;
+}
