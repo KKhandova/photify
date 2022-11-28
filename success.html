@@ -36,25 +36,11 @@
         </header>
 
         <main class="px-3">
-            <form action="https://httpbin.org/post" enctype="multipart/form-data" method="post">
-                <div class="mb-3">
-                    <label for="inputEmail" class="form-label">Email address</label>
-                    <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
-                        placeholder="name@example.com">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                </div>
-                <div class="mb-3">
-                    <label for="inputPrompt" class="form-label">What do you want?</label>
-                    <textarea class="form-control" name="prompt" id="inputPrompt" rows="3"></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="inputFiles" class="form-label">Upload 20 photos here</label>
-                    <input class="form-control" type="file" name="files" id="inputFiles" multiple>
-                </div>
-                <div class="mb-3">
-                    <button type="submit" class="btn btn-outline-light">Submit</button>
-                </div>
-            </form>
+            <div class="h-100 p-5 text-bg-dark rounded-3">
+                <h2>Thank you</h2>
+                <p>We will send your photos to you in 24 hours</p>
+                <button class="btn btn-outline-light" type="button">Do it again</button>
+            </div>
 
         </main>
 

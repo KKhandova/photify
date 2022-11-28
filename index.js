@@ -23,7 +23,7 @@ async function sendPhotosToServer() {
   const files = Array.from(fileInput.files);
 
   files.forEach((file) => {
-    formData.append("file", file);
+    formData.append("files", file);
   });
 
   console.log(formData);
