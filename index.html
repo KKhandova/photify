@@ -58,19 +58,19 @@
             <div class="carousel-inner">
                 <div class="carousel-item active container-fluid">
                     <div class="row text-center">
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-12">
                             <img src="images/NikitaThePirat.jpeg" alt="...">
                             <div class="card-body">
                                 <p class="card-text">Prompt example</p>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-12">
                             <img src="images/KristinaHorns.jpeg" alt="...">
                             <div class="card-body">
                                 <p class="card-text">Prompt example</p>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-12">
 
                             <img src="images/Kostya.jpeg" alt="...">
                             <div class="card-body">
@@ -138,9 +138,13 @@
         </div>
 
     </section>
-
+    <div class="mx-auto">
+        <hr>
+    </div>
+    <!-- User form -->
     <section id="run" class="mx-auto">
-        <div class="container-fluid">
+        <div class="container-fluid user-form">
+            <h1>Let's do your photos!</h1>
             <form action="https://httpbin.org/post" enctype="multipart/form-data" method="post">
                 <div class="mb-3">
                     <label for="inputEmail" class="form-label">Email address</label>
@@ -164,8 +168,20 @@
 
     </section>
 
-    <footer class="mt-auto text-center text-white-50">
+    <!-- <footer class="mt-auto text-center text-white-50">
         <p>Photify app 2022</p>
+    </footer> -->
+
+
+    <footer id="footer" class="mt-auto text-center text-white-50">
+        <div class="container-fluid">
+            <i class="fa-brands fa-twitter contact-icon "></i>
+            <i class="fa-brands fa-facebook contact-icon "></i>
+            <i class="fa-brands fa-instagram contact-icon "></i>
+            <i class="fa-solid fa-envelope contact-icon "></i>
+
+            <p>© Copyright 2022 Photify</p>
+        </div>
     </footer>
 
     <!-- <div class="d-flex flex-column align-items-center justify-content-center min-vh-100">
