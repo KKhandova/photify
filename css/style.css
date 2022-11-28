@@ -41,6 +41,10 @@ body {
 .container-fluid {
     
 }
+
+.carousel-item {
+    padding: 0 15%;
+} 
 /*
  * Header
  */
@@ -73,5 +77,5 @@ body {
 
 img {
     max-width: 18rem;
-    border-radius: 5%;
+    border-radius: 3%;
 }
