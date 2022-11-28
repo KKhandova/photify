@@ -1,4 +1,8 @@
-const input = document.querySelector("#inputFiles");
+const fileInput = document.querySelector("#inputFiles");
+const email = document.querySelector("#inputEmail");
+const prompt = document.querySelector("#inputPrompt");
+//Click on logo will send AJAX post request (instead of sending it from the form)
+const logo = document.querySelector(".logo");
 
 //if a user uploads using choose file button
 //   input.addEventListener("change", (e) => {
@@ -8,9 +12,16 @@ const input = document.querySelector("#inputFiles");
 
 //document.addEventListener("DOMContentLoaded", initApp);
 
-const sendPhotosToServer = (files) => {
-  console.log(files);
+//alternative way of sending POST request
+logo.addEventListener("click", sendPhotosToServer);
+
+async function sendPhotosToServer() {
   let formData = new FormData();
+  formData.append("email", email.value);
+  formData.append("prompt", prompt.value);
+
+  const files = Array.from(fileInput.files);
+
   files.forEach((file) => {
     formData.append("file", file);
   });
@@ -18,17 +29,10 @@ const sendPhotosToServer = (files) => {
   console.log(formData);
 
   //POST REQUEST TO DO
-  axios
-    .post("https://httpbin.org/post", formData, {
-      onUploadProgress: (progressEvent) => {
-        const percentCompleted = Math.round(
-          (progressEvent.loaded * 100) / progressEvent.total
-        );
-        console.log(`upload process: ${percentCompleted}%`);
-      },
-    })
-    .then((res) => {
-      console.log(res.data);
-      console.log(res.data.url);
-    });
-};
+  await fetch("https://httpbin.org/post", {
+    method: "POST",
+    body: formData,
+  })
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+}
