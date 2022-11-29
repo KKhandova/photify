@@ -21,7 +21,7 @@ fileInput.addEventListener("change", (e) => {
 //document.addEventListener("DOMContentLoaded", initApp);
 
 //alternative way of sending POST request
-logo.addEventListener("click", sendPhotosToServer);
+//logo.addEventListener("click", sendPhotosToServer);
 
 async function sendPhotosToServer() {
   if (!isSubmit) {
