@@ -26,6 +26,8 @@ body {
 
 }
 
+
+
 hr {
 
     border-style: dotted none none;
@@ -65,6 +67,11 @@ h1 {
 .carousel-item {
     padding: 0 15%;
 } 
+
+.card-text {
+  padding: 4% 0;
+  color: rgba(255, 255, 255, .5);
+}
 /*
  * Header
  */
@@ -73,6 +80,8 @@ h1 {
   color: rgba(255, 255, 255, .5);
   border-bottom: .25rem solid transparent;
 }
+
+
 
 .navbar-brand {
 
