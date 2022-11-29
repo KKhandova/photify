@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photify App</title>
+    <!--Icons and bootstrap-->
+    <script src="https://kit.fontawesome.com/e1b458d3c3.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!--Axios, Bootstrap, index.js -->
+    <script src="	https://unpkg.com/axios@0.24.0/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="index.js" defer></script>
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="text-bg-dark">
+    <section id="title">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <a class="navbar-brand logo" href="">Photify</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#examples">Examples</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#run">Send photos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+
+    <!-- Examples -->
+
+    <section id="examples" class="mx-auto text-center">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+                <div class="carousel-item active container-fluid">
+                    <div class="row text-center">
+                        <div class="col-lg-4 col-md-12">
+                            <img src="images/NikitaThePirat.jpeg" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Prompt example</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <img src="images/KristinaHorns.jpeg" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Prompt example</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+
+                            <img src="images/Kostya.jpeg" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Prompt example</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item container-fluid">
+                    <div class="row text-center">
+                        <div class="col-lg-4">
+                            <img src="images/1.jpeg" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Prompt example.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="images/2.jpeg" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Prompt example</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="images/3.jpeg" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Prompt example</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item container-fluid">
+                    <div class="row text-center">
+                        <div class="col-lg-4">
+                            <img src="images/vikingKristina.jpeg" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Prompt example.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+
+                            <img src="images/4.jpeg" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Prompt example</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="images/3.jpeg" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Prompt example</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+    </section>
+    <div class="mx-auto">
+        <hr>
+    </div>
+    <!-- User form -->
+    <section id="run" class="mx-auto">
+        <div class="container-fluid user-form">
+            <h1>Let's do your photos!</h1>
+            <form action="https://httpbin.org/post" enctype="multipart/form-data" method="post">
+                <div class="mb-3">
+                    <label for="inputEmail" class="form-label">Email address</label>
+                    <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
+                        placeholder="name@example.com" required>
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="inputPrompt" class="form-label">What do you want?</label>
+                    <textarea class="form-control" name="prompt" id="inputPrompt" rows="3" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="inputFiles" class="form-label">Upload 20 photos here</label>
+                    <input class="form-control" type="file" accept="image/*" name="files" id="inputFiles" multiple>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-outline-light">Submit</button>
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+    <!-- <footer class="mt-auto text-center text-white-50">
+        <p>Photify app 2022</p>
+    </footer> -->
+
+
+    <footer id="footer" class="mt-auto text-center text-white-50">
+        <div class="container-fluid">
+            <i class="fa-brands fa-twitter contact-icon "></i>
+            <i class="fa-brands fa-facebook contact-icon "></i>
+            <i class="fa-brands fa-instagram contact-icon "></i>
+            <i class="fa-solid fa-envelope contact-icon "></i>
+
+            <p>© Copyright 2022 Photify</p>
+        </div>
+    </footer>
+
+    <!-- <div class="d-flex flex-column align-items-center justify-content-center min-vh-100">
+         <div class="droparea">
+            <input id="fileInput" type="file" multiple />
+        </div> -->
+
+    <!-- <div class="input-group droparea">
+            <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04"
+                aria-label="Upload" multiple>
+        </div> 
+    </div> -->
+</body>
+
+</html>
