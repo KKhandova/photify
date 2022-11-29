@@ -23,6 +23,12 @@ fileInput.addEventListener("change", (e) => {
 //alternative way of sending POST request
 //logo.addEventListener("click", sendPhotosToServer);
 
+prompt.addEventListener("keyup", () => {
+  console.log(prompt.value);
+
+  prompt.value = prompt.value.replace(/[!@#$%^&*()_+-=~`,./\|&*<>]/, "");
+});
+
 async function sendPhotosToServer() {
   if (!isSubmit) {
     alert("Please check number of your images");
