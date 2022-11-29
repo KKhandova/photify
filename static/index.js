@@ -12,7 +12,7 @@ fileInput.addEventListener("change", (e) => {
   console.log(fileArray);
   if (fileArray.length < 15 || fileArray.length > 30) {
     isSubmit = false;
-    alert("alertalertaler");
+    alert("Please add 15-20 photos");
   } else {
     isSubmit = true;
   }

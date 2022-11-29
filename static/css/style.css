@@ -34,7 +34,7 @@ hr {
     border-color: black;
     border-width: 5px;
     width: 5%;
-    margin: 50px auto;
+    margin: 0 auto;
 
   }
 
@@ -81,6 +81,9 @@ h1 {
   border-bottom: .25rem solid transparent;
 }
 
+.form-label {
+  color: rgba(255, 255, 255, .5);
+}
 
 
 .navbar-brand {

@@ -149,13 +149,14 @@
             <form action="/submit" enctype="multipart/form-data" method="post">
                 <!-- <form action="https://httpbin.org/post" enctype="multipart/form-data" method="post"> -->
                 <div class="mb-3">
-                    <label for="inputEmail" class="form-label">Email address</label>
+                    <label for="inputEmail" class="form-label">Email address to send you the result</label>
                     <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
                         placeholder="name@example.com" required>
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
                 </div>
                 <div class="mb-3">
-                    <label for="inputPrompt" class="form-label">What do you want?</label>
+                    <label for="inputPrompt" class="form-label">Tell AI how to adjust your photos, 2-3 words
+                        each</label>
                     <textarea class="form-control" name="prompt" id="inputPrompt" rows="8" placeholder=""
                         maxlength="100" required>
 short hair
@@ -167,11 +168,11 @@ viking
 santa claus</textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="inputFiles" class="form-label">Upload 20 photos here</label>
+                    <label for="inputFiles" class="form-label">Upload 15-20 photos here</label>
                     <input class="form-control" type="file" accept="image/*" name="files" id="inputFiles" multiple>
                 </div>
                 <div class="mb-3">
-                    <button type="submit" class="btn btn-outline-light">Submit</button>
+                    <button type="submit" class="btn btn-outline-light">Do some AI magic!</button>
                 </div>
             </form>
         </div>
