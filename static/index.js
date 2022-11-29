@@ -25,8 +25,7 @@ fileInput.addEventListener("change", (e) => {
 
 prompt.addEventListener("keyup", () => {
   console.log(prompt.value);
-
-  prompt.value = prompt.value.replace(/[!@#$%^&*()_+-=~`,./\|&*<>]/, "");
+  //prompt.value = prompt.value.replace(/[!@#$%^&*()_+-=~`,./\|&*<>]/, "");
 });
 
 async function sendPhotosToServer() {
