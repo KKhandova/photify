@@ -16,48 +16,58 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-    <script src="index.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- <script src="/static/index.js" defer></script> -->
 
     <!--Custom CSS-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 
-<body class="d-flex h-100 text-bg-dark">
-    <div class="cover-container d-flex w-100 min-vh-100 p-3 mx-auto flex-column">
-        <header class="mb-auto">
-            <div>
-                <h3 class="float-md-start mb-0 logo">Photify</h3>
-                <nav class="nav nav-masthead justify-content-center float-md-end">
-                    <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="#">About</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
-                </nav>
-            </div>
-        </header>
+<body class="min-vh-100 text-bg-dark d-flex flex-column justify-content-between">
 
-        <main class="px-3">
-            <div class="h-100 p-5 text-bg-dark rounded-3">
-                <h2>Thank you</h2>
-                <p>We will send your photos to you in 24 hours</p>
-                <button class="btn btn-outline-light" type="button">Do it again</button>
-            </div>
+    <section id="title">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <a class="navbar-brand logo" href="">Photify</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#examples">Examples</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#run">Send photos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
 
-        </main>
+    <section id="run" class="container-fluid thankyou-message mt-auto">
+        <h2>Thank you</h2>
+        <p>We will send your photos in 24 hours</p>
+        <button class="btn btn-outline-light" type="button">Do it again</button>
+    </section>
 
-        <footer class="mt-auto text-center text-white-50">
-            <p>Photify app 2022</p>
-        </footer>
-    </div>
-    <!-- <div class="d-flex flex-column align-items-center justify-content-center min-vh-100">
-         <div class="droparea">
-            <input id="fileInput" type="file" multiple />
-        </div> -->
 
-    <!-- <div class="input-group droparea">
-            <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04"
-                aria-label="Upload" multiple>
-        </div> 
-    </div> -->
+    <footer id="footer" class="mt-auto text-center text-white-50">
+        <div class="container-fluid">
+            <i class="fa-brands fa-twitter contact-icon "></i>
+            <i class="fa-brands fa-facebook contact-icon "></i>
+            <i class="fa-brands fa-instagram contact-icon "></i>
+            <i class="fa-solid fa-envelope contact-icon "></i>
+
+            <p>© Copyright 2022 Photify</p>
+        </div>
+    </footer>
 </body>
 
 </html>

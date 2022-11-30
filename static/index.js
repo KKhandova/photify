@@ -1,26 +1,18 @@
 const fileInput = document.querySelector("#inputFiles");
-
 const email = document.querySelector("#inputEmail");
 const prompt = document.querySelector("#inputPrompt");
 //Click on logo will send AJAX post request (instead of sending it from the form)
 const logo = document.querySelector(".logo");
-let isSubmit = false;
 
-//Limit number of files
-//сделать неактивной кнопку сабмит, и активировать ее только если подходит количество файлов
+//Limit number of files (15-20)
 fileInput.addEventListener("change", (e) => {
   const fileArray = Array.from(fileInput.files);
-  console.log(fileArray);
-  if (fileArray.length < 15 || fileArray.length > 30) {
-    //isSubmit = false;
+  if (fileArray.length < 15 || fileArray.length > 25) {
     fileInput.setCustomValidity("Please select 15-25 photos");
   } else {
     fileInput.setCustomValidity("");
-    //isSubmit = true;
   }
 });
-
-fileInput.setCustomValidity("Please select 15-25 photos");
 
 //document.addEventListener("DOMContentLoaded", initApp);
 
@@ -33,10 +25,6 @@ prompt.addEventListener("keyup", () => {
 });
 
 async function sendPhotosToServer() {
-  if (!isSubmit) {
-    alert("Please check number of your images");
-    return;
-  }
   let formData = new FormData();
   formData.append("email", email.value);
   formData.append("prompt", prompt.value);
@@ -58,6 +46,7 @@ async function sendPhotosToServer() {
     .then((data) => console.log(data));
 }
 
+//Different carousels on mobile and desktop
 $(document).ready(function () {
   $("#carouselExampleControls").carousel();
   if ($(window).width() < 640) {
