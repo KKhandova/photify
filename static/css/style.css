@@ -57,7 +57,7 @@ h1 {
 }
 
 #footer {
-    padding: 5% 0;
+    padding: 2% 0;
 }
 
 .container-fluid {
@@ -127,7 +127,7 @@ p {
 
 @media (max-width: 575px) {
   img {
-      max-width: 70%;
+      max-width: 80%;
   }
 
 }

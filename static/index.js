@@ -1,4 +1,5 @@
 const fileInput = document.querySelector("#inputFiles");
+
 const email = document.querySelector("#inputEmail");
 const prompt = document.querySelector("#inputPrompt");
 //Click on logo will send AJAX post request (instead of sending it from the form)
@@ -11,12 +12,15 @@ fileInput.addEventListener("change", (e) => {
   const fileArray = Array.from(fileInput.files);
   console.log(fileArray);
   if (fileArray.length < 15 || fileArray.length > 30) {
-    isSubmit = false;
-    alert("Please add 15-20 photos");
+    //isSubmit = false;
+    fileInput.setCustomValidity("Please select 15-25 photos");
   } else {
-    isSubmit = true;
+    fileInput.setCustomValidity("");
+    //isSubmit = true;
   }
 });
+
+fileInput.setCustomValidity("Please select 15-25 photos");
 
 //document.addEventListener("DOMContentLoaded", initApp);
 
@@ -53,3 +57,16 @@ async function sendPhotosToServer() {
     .then((res) => res.json())
     .then((data) => console.log(data));
 }
+
+$(document).ready(function () {
+  $("#carouselExampleControls").carousel();
+  if ($(window).width() < 640) {
+    console.log("mobile");
+    $(".col-sm-4")
+      .unwrap()
+      .unwrap()
+      .addClass("carousel-item")
+      .addClass("container-fluid");
+    $(".col-sm-4:first").addClass("active");
+  }
+});
