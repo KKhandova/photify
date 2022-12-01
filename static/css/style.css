@@ -93,3 +93,13 @@ p {
     width: auto;
    
 }
+
+#insta-link {
+  color: white;
+  text-decoration: none;
+}
+
+#insta-link:hover {
+  color: black;
+}
+
