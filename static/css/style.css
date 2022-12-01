@@ -103,3 +103,6 @@ p {
   color: black;
 }
 
+.small-notice {
+color: rgba(255, 255, 255, .5);
+}
