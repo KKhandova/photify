@@ -19,10 +19,10 @@ fileInput.addEventListener("change", (e) => {
 //alternative way of sending POST request
 //logo.addEventListener("click", sendPhotosToServer);
 
-prompt.addEventListener("keyup", () => {
-  console.log(prompt.value);
-  //prompt.value = prompt.value.replace(/[!@#$%^&*()_+-=~`,./\|&*<>]/, "");
-});
+// prompt.addEventListener("keyup", () => {
+//   console.log(prompt.value);
+//   //prompt.value = prompt.value.replace(/[!@#$%^&*()_+-=~`,./\|&*<>]/, "");
+// });
 
 async function sendPhotosToServer() {
   let formData = new FormData();
