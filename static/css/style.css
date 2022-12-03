@@ -106,3 +106,7 @@ p {
 .small-notice {
 color: rgba(255, 255, 255, .5);
 }
+
+.p-footer {
+  margin: 0;
+}

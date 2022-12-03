@@ -37,16 +37,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#run">Отправить</a>
+                            <a class="nav-link" href="#examples">Examples</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#rules">Правила</a>
+                            <a class="nav-link" href="#run">Send photos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about">О сервисе</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#footer">Контакты</a>
+                            <a class="nav-link" href="#">Contacts</a>
                         </li>
                     </ul>
                 </div>
@@ -156,18 +153,12 @@
     <!-- User form -->
     <section id="run" class="mx-auto">
         <div class="container-fluid user-form">
-            <h1>Сгенерируйте мне фотографии!</h1>
+            <h1>Let's do your photos!</h1>
             <form action="/submit" enctype="multipart/form-data" method="post">
                 <!-- <form action="https://httpbin.org/post" enctype="multipart/form-data" method="post"> -->
                 <div class="mb-3">
-                    <label for="input-gender" class="form-label">Ваш пол</label>
-
-                    <select class="form-select" aria-label="Default select example" id="input-gender">
-                        <option value="female" selected>Женский</option>
-                        <option value="male">Мужской</option>
-                    </select>
-
-                    <!-- <div class="form-check" id="input-gender">
+                    <label for="input-gender" class="form-label">Your gender</label>
+                    <div class="form-check" id="input-gender">
                         <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="female"
                             checked>
                         <label class="form-check-label" for="inlineRadio1">Female</label>
@@ -175,10 +166,10 @@
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="male">
                         <label class="form-check-label" for="inlineRadio2">Male</label>
-                    </div> -->
+                    </div>
                 </div>
                 <div class="mb-3">
-                    <label for="inputEmail" class="form-label">Адрес электронной почты</label>
+                    <label for="inputEmail" class="form-label">Email address to send you the result</label>
                     <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
                         placeholder="name@example.com" required>
                     <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
@@ -197,102 +188,87 @@ viking
 santa claus</textarea>
                 </div> -->
                 <div class="mb-3">
-                    <label for="inputFiles" class="form-label">Выберите 15-20 фотографий</label>
+                    <label for="inputFiles" class="form-label">Upload 15-20 photos here</label>
                     <input class="form-control" type="file" accept="image/*" name="files" id="inputFiles" multiple
                         required>
                 </div>
-                <div class="mt-4">
-                    <button type="submit" class="btn btn-outline-light">Отправить!</button>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-outline-light">Do some AI magic!</button>
                 </div>
             </form>
         </div>
 
     </section>
 
-    <section id="rules" class="mx-auto">
-        <div class="container-fluid user-form">
-            <h1>Как пользоваться:</h1>
-            <ol class="list-group list-group-numbered">
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                        <div class="fw-bold">Заполните форму</div>
+    <section class="white-section" id="pricing">
 
+        <h2>A Plan for Every Dog's Needs</h2>
+        <p>Simple and affordable price plans for your and your dog.</p>
+
+        <div class="row">
+            <div class="pricing-column col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Chihuahua</h3>
                     </div>
-
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                        <div class="fw-bold">Загрузите свои фотографии</div>
-                        15 - 25 фотографий
+                    <div class="card-body">
+                        <h2>Free</h2>
+                        <p>5 Matches Per Day</p>
+                        <p>10 Messages Per Day</p>
+                        <p>Unlimited App Usage</p>
+                        <div class="d-grid">
+                            <button type="button" class="btn btn-outline-dark btn-lg">Sign Up</button>
+                        </div>
                     </div>
+                </div>
+            </div>
 
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                        <div class="fw-bold">Оплатите</div>
-                        100 рублей за один набор изображений
+            <div class="pricing-column col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Labrador</h3>
                     </div>
-
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                        <div class="fw-bold">Получите результат на почту</div>
-                        Мы отправим вам результаты в течение 24 часов после оплаты
+                    <div class="card-body">
+                        <h2>$49 / mo</h2>
+                        <p>Unlimited Matches</p>
+                        <p>Unlimited Messages</p>
+                        <p>Unlimited App Usage</p>
+                        <div class="d-grid">
+                            <button type="button" class="btn btn-dark btn-lg">Sign Up</button>
+                        </div>
                     </div>
+                </div>
 
-                </li>
-            </ol>
-        </div>
-        <div class="container-fluid user-form">
-            <h1>Как выбрать фотографии:</h1>
-            <ol class="list-group list-group-numbered">
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                        <div class="fw-bold">Селфи - лучше всего!</div>
-                        На фотографии должно быть хорошо видно ваше лицо
+            </div>
+            <div class="pricing-column col-lg-4 col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Mastiff</h3>
                     </div>
-
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                        <div class="fw-bold">В кадре только вы</div>
-                        Чтобы и на результатах были только вы 😉
+                    <div class="card-body">
+                        <h2>$99 / mo</h2>
+                        <p>Pirority Listing</p>
+                        <p>Unlimited Matches</p>
+                        <p>Unlimited Messages</p>
+                        <p>Unlimited App Usage</p>
+                        <div class="d-grid">
+                            <button type="button" class="btn btn-dark btn-lg">Sign Up</button>
+                        </div>
                     </div>
-
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                        <div class="fw-bold">Без солнечных очков</div>
-                        И любых других предметов, закрывающих ваше лицо
-                    </div>
-
-                </li>
-            </ol>
+                </div>
+            </div>
         </div>
 
-    </section>
+        <footer id="footer" class="mt-auto text-center text-white-50">
+            <div class="container-fluid">
+                <i class="fa-brands fa-twitter contact-icon "></i>
+                <i class="fa-brands fa-facebook contact-icon "></i>
+                <i class="fa-brands fa-instagram contact-icon "></i>
+                <i class="fa-solid fa-envelope contact-icon "></i>
 
-    <section id="about" class="mx-auto">
-        <div class="container-fluid user-form">
-            <h1>О сервисе</h1>
-            <p>Мы используем искуственный интеллект для генерации цифровых изображений на основе ваших фотографий.</p>
-            <p>Цена одного набора изображений - 100 рублей.</p>
-            <p><a href="pravo.html">Правовая информация</a></p>
-        </div>
-    </section>
-
-    <footer id="footer" class="mt-auto text-center text-white-50">
-        <div class="container-fluid">
-
-            <i class="fa-brands fa-twitter contact-icon "></i>
-            <i class="fa-brands fa-facebook contact-icon "></i>
-            <i class="fa-brands fa-instagram contact-icon "></i>
-            <i class="fa-solid fa-envelope contact-icon "></i>
-            <p class="p-footer">profilephotoai@gmail.com</p>
-            <p class="p-footer">Виролайнен Яна Акселевна ИНН: 781306304431</p>
-            <p class="p-footer">© Copyright 2022 Photify</p>
-        </div>
-    </footer>
+                <p>© Copyright 2022 Photify</p>
+            </div>
+        </footer>
 </body>
 
 </html>
