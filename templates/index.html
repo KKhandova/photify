@@ -157,12 +157,12 @@
     <section id="run" class="mx-auto">
         <div class="container-fluid user-form">
             <h1>Создай свой набор аватарок!</h1>
-            <form action="/submit" enctype="multipart/form-data" method="post">
-                <!-- <form action="https://httpbin.org/post" enctype="multipart/form-data" method="post"> -->
+            <!-- <form action="/submit" enctype="multipart/form-data" method="post"> -->
+            <form action="https://httpbin.org/post" enctype="multipart/form-data" method="post">
                 <div class="mb-3">
                     <label for="input-gender" class="form-label">Ваш пол</label>
 
-                    <select class="form-select" aria-label="Default select example" id="input-gender">
+                    <select class="form-select" name="gender" id="input-gender">
                         <option value="female" selected>Женский</option>
                         <option value="male">Мужской</option>
                     </select>
