@@ -110,3 +110,26 @@ color: rgba(255, 255, 255, .5);
 .p-footer {
   margin: 0;
 }
+/* 
+Oferta */
+
+.oferta {
+  max-width: 50em;
+  padding: 2%;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.oferta h3 {
+  margin: 3% 0;
+  font-size: 1.3rem;
+}
+
+.oferta h4 {
+  margin: 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.oferta p {
+  font-size: 1rem;
+}
