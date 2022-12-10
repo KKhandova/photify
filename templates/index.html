@@ -12,7 +12,7 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <!--Axios, Bootstrap, index.js -->
-    <script src="	https://unpkg.com/axios@0.24.0/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios@0.24.0/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
@@ -22,6 +22,23 @@
     <!--Custom CSS-->
     <link rel="icon" type="image/x-icon" href="static/favicon.ico">
     <link rel="stylesheet" href="/static/css/style.css">
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(91608464, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/91608464" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 
 <body class="text-bg-dark">
@@ -157,8 +174,8 @@
     <section id="run" class="mx-auto">
         <div class="container-fluid user-form">
             <h1>Создай свой набор аватарок!</h1>
-            <!-- <form action="/submit" enctype="multipart/form-data" method="post"> -->
-            <form action="https://httpbin.org/post" enctype="multipart/form-data" method="post">
+             <form action="/submit" enctype="multipart/form-data" method="post" id="form-main">
+<!--            <form action="https://httpbin.org/post" enctype="multipart/form-data" method="post">-->
                 <div class="mb-3">
                     <label for="input-gender" class="form-label">Ваш пол</label>
 
@@ -202,9 +219,12 @@ santa claus</textarea>
                         required>
                 </div>
                 <div class="mt-4">
-                    <button type="submit" class="btn btn-outline-light">Запустить AI</button>
+                    <input type="hidden" name="retry_order_id" id="retry_order_id" value="{{ retry_order_id }}">
+                    <input type="hidden" name="retry_key" id="retry_key" value="{{ retry_key }}">
+                    <button type="submit" class="btn btn-outline-light" id="form-submit">Запустить AI</button>
                 </div>
             </form>
+<!--                                <button class="btn btn-outline-light" id="form-submit2">Запустить AI</button>-->
         </div>
 
     </section>
@@ -230,7 +250,7 @@ santa claus</textarea>
                 <li class="list-group-item d-flex justify-content-between align-items-start">
                     <div class="ms-2 me-auto">
                         <div class="fw-bold">Оплатите</div>
-                        150 рублей за один набор изображений
+                        199 рублей за один набор изображений
                     </div>
 
                 </li>
@@ -276,7 +296,7 @@ santa claus</textarea>
         <div class="container-fluid user-form">
             <h1>О сервисе</h1>
             <p>Мы используем искуственный интеллект для генерации цифровых изображений на основе ваших фотографий.</p>
-            <p>Цена одного набора изображений - 150 рублей.</p>
+            <p>Цена одного набора изображений - 199 рублей.</p>
             <p><a href="pravo">Правовая информация</a></p>
         </div>
     </section>

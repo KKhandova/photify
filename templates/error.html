@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,26 +21,6 @@
 
     <!--Custom CSS-->
     <link rel="stylesheet" href="/static/css/style.css">
-
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-       m[i].l=1*new Date();
-       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-       ym(91608464, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true
-       });
-
-       ym(91608464,'reachGoal','successful_payment')
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/91608464" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-
 </head>
 
 <body class="min-vh-100 text-bg-dark d-flex flex-column justify-content-between">
@@ -72,14 +52,44 @@
     </section>
 
     <section id="run" class="container-fluid thankyou-message mt-auto">
-        <h2>Спасибо!</h2>
-        <p>Аватарки будут готовы в течение 24 часов. Остались вопросы -- пишите в директ в Instagram</p>
+        <h2>Ошибка</h2>
+        <p>Слишком мало фотографий с вашим лицом!<br/>
+            Пожалуйста, проверьте фотографии и попробуйте еще раз</p>
 <!--        <p class="small-notice">Фото будут готовы в течение 24 часов после оплаты (не забудьте проверить папку "спам").-->
 <!--        </p>-->
         <!-- <p class="small-notice">We will send your photos in 24 hours after your payment. Don't forget to check your spam -->
         <!-- folder as well</p> -->
-        <button class="btn btn-outline-light" type="button"> <a id='insta-link'
-                href="https://www.instagram.com/photify.one/">Мы в Instagram</a></button>
+
+                <div class="container-fluid user-form">
+<!--            <h4>Как выбрать фотографии:</h4>-->
+            <ol class="list-group list-group-numbered">
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Селфи - лучше всего!</div>
+                        На фотографии должно быть хорошо видно ваше лицо
+                    </div>
+
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">В кадре только вы</div>
+                        Чтобы и на результатах были только вы 😉
+                    </div>
+
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Без солнечных очков</div>
+                        И любых других предметов, закрывающих ваше лицо
+                    </div>
+
+                </li>
+            </ol>
+        </div>
+    <section id="run2" class="container-fluid thankyou-message mt-auto">
+                <br/><button class="btn btn-outline-light" type="button"> <a href="/">На главную</a></button>
+    </section>
+
     </section>
 
 
