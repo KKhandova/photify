@@ -77,17 +77,6 @@ async function sendPhotosToServer(event) {
   console.log(gender.value);
   console.log(formData);
 
-  //REMOVE THIS
-  //  document.querySelector("body").style("background-color", "red");
-  // document.querySelector("body").classList.remove("text-bg-dark");
-  // document.querySelector("body").style.background = "red";
-
-  //   return
-  //POST REQUEST TO DO
-  //  await fetch("https://httpbin.org/post", {
-  console.log("SHOW MODAL WITH SPINNER");
-  // todo please add spinner here
-
   await fetch("/submit?ajax=1", {
     //   await fetch("https://httpbin.org/post", {
     method: "POST",
@@ -96,9 +85,9 @@ async function sendPhotosToServer(event) {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      if (data) {
+      if (data && Object.hasOwn(data, "redirect_url")) {
         console.log(data);
-        redirectUrl = data["redirect_url"];
+        const redirectUrl = data["redirect_url"];
         console.log("redirect Url", redirectUrl);
         window.location.href = redirectUrl;
       } else {
