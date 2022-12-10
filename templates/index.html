@@ -52,12 +52,12 @@
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header hidden">
                     <h1 class="modal-title fs-5 p-0" id="staticBackdropLabel"></h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div id="photo-checks">
+                    <div id="photo-checks" class="pt-3">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
                             <label class="form-check-label" for="flexCheckDefault">
@@ -83,7 +83,7 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Назад</button>
+                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Назад</button>
                     <button type="button" id='btn-modal-submit' class="btn btn-primary">Отправить</button>
                 </div>
             </div>
