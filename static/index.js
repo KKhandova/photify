@@ -54,13 +54,14 @@ modalBtnSubmit.addEventListener("click", () => {
 
 function showModal(event) {
   event.preventDefault();
+  ym(91608464, "reachGoal", "show_modal");
   myModal.show();
 }
 
 async function sendPhotosToServer(event) {
   //  event.preventDefault();
-
   ym(91608464, "reachGoal", "form_submit");
+//  ym(91608464, "reachGoal", "request_sent");
 
   let formData = new FormData();
   formData.append("gender", gender.value);
