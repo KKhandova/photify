@@ -108,4 +108,12 @@ $(document).ready(function () {
       .addClass("container-fluid");
     $(".col-sm-4:first").addClass("active");
   }
+
+  if (window.location.hash == "#test") {
+    console.log("test");
+    var opt = document.createElement('option');
+    opt.value = "female_experimental";
+    opt.innerHTML = "Женский (Экспериментальный)";
+    gender.appendChild(opt);
+  }
 });
