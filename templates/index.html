@@ -24,24 +24,73 @@
     <link rel="stylesheet" href="/static/css/style.css">
 
     <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-       m[i].l=1*new Date();
-       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-       ym(91608464, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true
-       });
+        ym(91608464, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
+        });
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/91608464" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/91608464" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
     <!-- /Yandex.Metrika counter -->
 </head>
 
 <body class="text-bg-dark">
+
+    <!-- Modal check photos -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 p-0" id="staticBackdropLabel"></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="photo-checks">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                            <label class="form-check-label" for="flexCheckDefault">
+                                На фотографиях только я
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" required>
+                            <label class="form-check-label" for="flexCheckChecked">
+                                На фотографиях хорошо видно мое лицо
+                            </label>
+                        </div>
+                    </div>
+                    <div id="photo-loading" class="hidden">
+                        <p>Ваши фотографии загружаются, это может занять несколько минут.</p>
+                        <p>Пожалуйста, не закрывайте эту вкладку.</p>
+                        <div class="d-flex justify-content-center">
+                            <div class="spinner-border" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Назад</button>
+                    <button type="button" id='btn-modal-submit' class="btn btn-primary">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <section id="title">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-md navbar-dark">
@@ -174,8 +223,8 @@
     <section id="run" class="mx-auto">
         <div class="container-fluid user-form">
             <h1>Создай свой набор аватарок!</h1>
-             <form action="/submit" enctype="multipart/form-data" method="post" id="form-main">
-<!--            <form action="https://httpbin.org/post" enctype="multipart/form-data" method="post">-->
+            <form action="/submit" enctype="multipart/form-data" method="post" id="form-main">
+                <!--            <form action="https://httpbin.org/post" enctype="multipart/form-data" method="post">-->
                 <div class="mb-3">
                     <label for="input-gender" class="form-label">Ваш пол</label>
 
@@ -224,7 +273,7 @@ santa claus</textarea>
                     <button type="submit" class="btn btn-outline-light" id="form-submit">Запустить AI</button>
                 </div>
             </form>
-<!--                                <button class="btn btn-outline-light" id="form-submit2">Запустить AI</button>-->
+            <!--                                <button class="btn btn-outline-light" id="form-submit2">Запустить AI</button>-->
         </div>
 
     </section>

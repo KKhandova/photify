@@ -133,3 +133,12 @@ Oferta */
 .oferta p {
   font-size: 1rem;
 }
+
+
+.modal-content {
+  background-color: #393E46;
+}
+
+.hidden {
+  display: none;
+}
